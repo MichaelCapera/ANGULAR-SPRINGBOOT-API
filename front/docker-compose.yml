@@ -1,0 +1,13 @@
+version: '3.5' 
+
+services:
+   front-service:
+      container_name: front
+      restart: always 
+      build: ./
+      volumes:
+       - './:/usr/src/app'
+      ports:
+       - "4201:4200"
+      command: >
+        bash -c "npm start" 
